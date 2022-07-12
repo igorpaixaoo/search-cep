@@ -7,7 +7,8 @@ ReactJS, HTML, CSS, WebPack 5, Babel, Axios, JSON
 
 ## API utilidada:
 apiCEP
-site:[site:](https://apicep.com/api-de-consulta/)
+
+[Site da API](https://apicep.com/api-de-consulta/)
 
 ## Version: BETA
 
