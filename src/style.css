@@ -63,6 +63,11 @@
     transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+span{
+    color: brown;
+    font-weight: 700;
+}
+
 #search:hover{
     border-radius: 10px;
 }

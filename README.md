@@ -14,4 +14,7 @@ apiCEP
 
 ## Version: BETA
 
+### Atualização: 
+Mudança de cores;
+
 

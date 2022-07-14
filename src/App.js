@@ -35,10 +35,10 @@ function App(){
         placeholder="Digite seu CEP" onChange={input} maxLength={9}/>
         <Button onClick={verCep} id="btn" text="Procurar"></Button>
         <div className='campos'>              
-          <h3>Cidade: {cepDados.city} </h3>
-          <p>Estado: {cepDados.state} </p>
-          <p>Distrito: {cepDados.district} </p>
-          <p>Rua: {cepDados.address} </p>
+          <h3>Cidade: <span>{cepDados.city}</span></h3>
+          <p>Estado: <span>{cepDados.state}</span></p>
+          <p>Distrito: <span>{cepDados.district}</span></p>
+          <p>Rua: <span>{cepDados.address}</span></p>
         </div> 
         <p id='author'>By Igor</p>
       </div>      
