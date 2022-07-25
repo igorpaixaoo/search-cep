@@ -13,7 +13,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: linear-gradient(180deg, #5db4ff, #ffd852);
+    background-image: linear-gradient(180deg, #232324, #464646);
 }
 
 .container{
@@ -38,50 +38,60 @@
     padding: 10px;
 }
 
+.request{
+    padding: 0;
+    margin: 0;
+    transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
 #search{
     margin-top: 50px;
     width: 180px;
     height: 35px;
     font-size: 15pt;
     text-align: center;
+    color: white;
     outline: none;
     border: 1px solid;
-    border-radius: 5px;
+    border-radius: 5px 0px 0px 5px;
     background-color: transparent;
     transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-#btn{
-    margin-top: 20px;
-    width: 120px;
-    height: 35px;
-    font-size: 12pt;
-    border: 1px solid;
-    outline: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-span{
-    color: brown;
-    font-weight: 700;
 }
 
 #search:hover{
     border-radius: 10px;
 }
 
-#btn:hover{
-    border-radius: 15px;
+#btn{
+    width: 50px;
+    height: 36px;
+    font-size: 15pt;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
     background-color: transparent;
-    color: black;
-    font-size: 13pt;
+    border: 1px solid;
+    outline: none;
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+    transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+#btn:hover{
+    border-radius: 12px;
+    background-color: transparent;
+    color: white;
+}
+
+span{
+    color: darkblue;
+    font-weight: 700;
+}
 
 #tittle{
     font-size: 50pt;
+    color: white;
 }
 
 h3{
@@ -94,6 +104,7 @@ p{
 
 #author{
     margin-top: 20px;
+    color: white;
 }
 
 @media screen and (max-width: 600px) {
