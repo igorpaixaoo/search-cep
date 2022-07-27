@@ -102,6 +102,20 @@ p{
     font-size: 15pt;
 }
 
+#errorCep{
+    margin-top: 30px;
+    color: red;
+    width: 90%;
+    text-align: center;
+}
+
+#errorSintax{
+    margin-top: 30px;
+    color: wheat;
+    width: 90%;
+    text-align: center;
+}
+
 #author{
     margin-top: 20px;
     color: white;

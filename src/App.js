@@ -3,6 +3,7 @@ import { useState } from 'react'
 import api from './server/api.js'
 import style from './styles/style.css'
 import Button from './components/Button'
+import {ErrorCep, ErrorSintax} from './components/Error'
 import {BsSearch} from 'react-icons/bs'
 
 
@@ -10,6 +11,9 @@ function App(){
   var [cep, setCep] = useState(null)
   var [cepDados, setCepDados] = useState({})
   var [show, setShow] = useState(false)
+  var [error1, setError1] = useState(false);
+  var [error2, setError2] = useState(false);
+  
     
   const input = (e) =>{
     const {value} = e.target
@@ -19,16 +23,22 @@ function App(){
 
   const verCep = async() =>{
     if(cep != null){   
-      try{       
-        setShow(true)          
+      try{              
         const response = await api.get(`${cep}.json`)
         setCepDados(response.data) 
         console.log(cepDados)  
+
         setCep("")
+        setShow(true)   
+        setError1(false)
+        setError2(false)
       }catch{ 
-        alert("Error 404")
+        setShow(false)
+        setError1(true)
       }
-    }else alert("Digite algo")
+    }else{
+      setError2(true);
+    }
   }
 
   return(
@@ -40,6 +50,13 @@ function App(){
           placeholder="Digite seu CEP" onChange={input} maxLength={9}/>
           <Button onClick={verCep} id="btn" text={<BsSearch/>}></Button>
         </div>
+        {error1 &&(
+          <ErrorCep/>
+        )}
+        {error2 &&(
+          <ErrorSintax/>
+        )}
+
         {show &&(
           <div className='campos'>              
             <h3>Cidade: <span>{cepDados.city}</span></h3>

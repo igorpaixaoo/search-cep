@@ -12,7 +12,7 @@ apiCEP
 
 [Demo:](https://search-cep-ecru.vercel.app/)
 
-## Version: 1.2.5.0
+## Version: 1.3
 
 
 
